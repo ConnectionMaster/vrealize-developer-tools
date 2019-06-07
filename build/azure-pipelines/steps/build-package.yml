@@ -1,10 +1,5 @@
 # Steps that happen regardless of CI, PR, or release builds
 steps:
-  - task: NodeTool@0
-    displayName: 'Use Node 9.x'
-    inputs:
-      versionSpec: 9.x
-
   - script: |
       sudo cp build/azure-pipelines/linux/xvfb.init /etc/init.d/xvfb
       sudo chmod +x /etc/init.d/xvfb
@@ -13,15 +8,12 @@ steps:
     displayName: 'Linux: Start X Virtual Frame Buffer'
     condition: eq(variables['Agent.OS'], 'Linux')
 
-  - script: yarn install --frozen-lockfile
-    displayName: Install dependencies
-
   - script: 'node node_modules/gulp/bin/gulp.js package'
     displayName: Build VSIX package
     env:
       DISPLAY: :10
 
-  - script: './node_modules/.bin/codecov -f **/coverage/*.json'
+  - script: './node_modules/.bin/codecov -f **/coverage/*.json -t 2ed85a74-0517-4235-963f-4a2ba3e51438'
     displayName: Upload coverage to codecov.io
 
   - task: CopyFiles@2

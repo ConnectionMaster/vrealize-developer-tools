@@ -40,7 +40,7 @@ export class ConfigurationManager extends BaseConfiguration implements Registrab
     }
 
     register(context: vscode.ExtensionContext, clientWindow: ClientWindow): void {
-        this.logger.debug("Registering the configuration system")
+        this.logger.debug("Registering the configuration manager")
         this.clientWindow = clientWindow
         this.vrdev = vscode.workspace.getConfiguration().get<VrealizeSettings>("vrdev") as VrealizeSettings
 

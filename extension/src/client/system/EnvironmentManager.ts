@@ -20,7 +20,7 @@ export class EnvironmentManager extends BaseEnvironment {
     constructor(protected config: ConfigurationManager) {
         super()
 
-        this.logger.debug("Registering the environment system...")
+        this.logger.debug("Registering the environment manager...")
     }
 
     get displayName(): string {
