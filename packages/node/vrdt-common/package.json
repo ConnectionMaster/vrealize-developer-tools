@@ -1,6 +1,6 @@
 {
   "name": "@vmware/vrdt-common",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "",
   "license": "MIT",
   "homepage": "https://github.com/vmware/vrealize-developer-tools",
@@ -17,14 +17,14 @@
     "@types/request": "^2.48.5",
     "@types/request-promise-native": "^1.0.17",
     "@types/vscode": "1.54.0",
-    "jest": "^26.6.3",
+    "jest": "^29.7.0",
     "jest-create-mock-instance": "^1.1.0",
-    "jest-extended": "0.11.5",
-    "ts-jest": "^26.5.4",
-    "typescript": "~4.2.3"
+    "jest-extended": "4.0.2",
+    "ts-jest": "^29.1.5",
+    "typescript": "~5.5.2"
   },
   "dependencies": {
-    "fast-xml-parser": "3.19.0",
+    "fast-xml-parser": "4.1.2",
     "fs-extra": "~9.1.0",
     "glob": "^7.1.6",
     "jwt-decode": "^3.1.2",
